@@ -1,0 +1,268 @@
+/* General Reset and Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f9f6;
+  scroll-behavior: smooth;
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+  transition: opacity 0.5s ease; 
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+video {
+ width: 100%;
+ height: 50vh;
+}
+
+#content {
+  display: none;
+}
+
+
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+  box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  margin-left: 43px;
+  display: flex;
+  align-items: center;
+  height: 94%;
+  width: 10%;
+  cursor: pointer;
+}
+
+.logo > span {
+  font-size: 15px;
+  font-family: "Lato", system-ui;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  padding: 5px;
+  margin-bottom: 4px;
+  margin-left: -1px;
+}
+
+.logo img{
+width: 27%;
+}
+
+.middle-nav {
+  width: 29%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.middle-nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.middle-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.middle-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 2px;
+  background-color: #000000;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.middle-nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.left-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.left-nav .cta {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-radius: 24px;
+}
+
+.left-nav .cta:hover {
+  background-color: #f0f8ff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: none;
+  background: none;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.about-hero {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 46px;
+  text-align: start;
+  margin-left: 28px;
+  font-weight: 300;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: start;
+  margin-right: 48px;
+  padding: 0px 23px;
+  line-height: 1.6;
+}
+
+/* About Content Section */
+.about-content {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 4.5rem;
+  margin-bottom: 46px;
+  text-align: start;
+  margin-left: 28px;
+  font-weight: 300;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: start;
+  padding: 0px 23px;
+  line-height: 1.9;
+  margin-left: 14px;
+}
+
+.about-content .about-text p:first-of-type {
+  margin-bottom: 20px;
+}
+
+/* Mission and Values Section */
+/* Mission and Values Section */
+.about-values {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.about-values .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-values .about,
+.about-values .values {
+  margin-bottom: 40px;
+}
+
+.about-values h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 400;
+  color: #333;
+}
+
+.about-values p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.mission-values ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.mission-values ul li {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.mission-values ul li:before {
+  content: '•';
+  color: #000;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
